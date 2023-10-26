@@ -3,10 +3,10 @@ import random
 POPULATION_SIZE = 8
 NUMB_OF_ELITE_CHROSOMOSOMES = 1
 TOURNAMENT_SELECTION_SIZE = 4
-TARGET_CHROMOSOME = [1, 1, 0, 1, 0, 0, 0, 1, 1, 0]
-MUTATION_RATE = 0.25
+TARGET_CHROMOSOME = [1, 1, 0, 1, 0, 0, 0, 1, 1, 0] #target chrosome degistirebilir her sefernde farkli degerler alinniyor
+MUTATION_RATE = 0.25 #mutasyon orani %25 yeterli
 
-class Chromosome:
+class Chromosome: #genel fonksiyonlar init olarak cunku birden fazla kez farkli yerlerde kullaniyoruz
     def __init__(self):
         self.genes = []
         self.fitness = 0
@@ -19,7 +19,7 @@ class Chromosome:
     def get_genes(self):
         return self.genes
 
-    def get_fitness(self):
+    def get_fitness(self): #fitnes degerlerini hesapla eger gendek random gendeki[i] target gendeki [i] ile eslesiyosa fitnessi 1 artir
         self.fitness = 0
         for i in range(len(self.genes)):
             if self.genes[i] == TARGET_CHROMOSOME[i]:
@@ -30,7 +30,7 @@ class Chromosome:
         return str(self.genes)
 
 class Population:
-    def __init__(self, size):
+    def __init__(self, size): #populasyonu tuttugumuz yer
         self.chromosomes = []
         for _ in range(size):
             self.chromosomes.append(Chromosome())
@@ -38,7 +38,7 @@ class Population:
     def get_chromosomes(self):
         return self.chromosomes
 
-class GeneticAlgorithm:
+class GeneticAlgorithm: #burada farkli genetik algoritmalar kullanilabilir.saglikli varsayilan genlerden yeni genkler evolve(mutasyon veya evrim) ediliyor.
 
     @staticmethod
     def evolve(pop):
@@ -97,7 +97,7 @@ class GeneticAlgorithm:
 
 
     @staticmethod
-    def print_the_population(pop, gen_number):
+    def print_the_population(pop, gen_number): #console information
         print("\n------------------------------------------")
         print("Generation #", gen_number, "| Fittest chromosome fitness:", pop.get_chromosomes()[0].get_fitness())
         print("Target Chromosome:", TARGET_CHROMOSOME)
@@ -112,9 +112,9 @@ population = Population(POPULATION_SIZE)
 population.get_chromosomes().sort(key=lambda x: x.get_fitness(), reverse=True)
 GeneticAlgorithm.print_the_population(population, 0)
 
-generation_number = 1
+generation_number = 1 # uretilen veya evolve edilen generation sayisi artrmak icin deger
 
-while population.get_chromosomes()[0].get_fitness() < len(TARGET_CHROMOSOME):
+while population.get_chromosomes()[0].get_fitness() < len(TARGET_CHROMOSOME): #burada fitnes deger max olana kadar dongu devam edyor  while evolved gene fitness == target gene
     population = GeneticAlgorithm.evolve(population)
     population.get_chromosomes().sort(key=lambda x: x.get_fitness(), reverse=True)
     fittest_chromosome = population.get_chromosomes()[0]
