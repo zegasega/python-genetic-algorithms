@@ -1,6 +1,6 @@
 import random
 
-POPULATION_SIZE = 8
+POPULATION_SIZE = 8 #pop size 4,8,12 yeterli
 NUMB_OF_ELITE_CHROSOMOSOMES = 1
 TOURNAMENT_SELECTION_SIZE = 4
 TARGET_CHROMOSOME = [1, 1, 0, 1, 0, 0, 0, 1, 1, 0] #target chrosome degistirebilir her sefernde farkli degerler alinniyor
@@ -39,6 +39,7 @@ class Population:
         return self.chromosomes
 
 class GeneticAlgorithm: #burada farkli genetik algoritmalar kullanilabilir.saglikli varsayilan genlerden yeni genkler evolve(mutasyon veya evrim) ediliyor.
+
 
     @staticmethod
     def evolve(pop):
