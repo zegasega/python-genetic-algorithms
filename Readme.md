@@ -23,7 +23,7 @@ Proje, aşağıdaki bölümlerden oluşur:
 
 Bu projede bazı önemli parametreler bulunur:
 
-- `POPULATION_SIZE`: Popülasyonun boyutu.
+- `POPULATION_SIZE`: Popülasyonun boyutu veya büyüklüğünü belirler.
 - `NUMB_OF_ELITE_CHROMOSOMES`: Seçkin kromozom sayısı.
 - `TOURNAMENT_SELECTION_SIZE`: Turnuva seçimi boyutu.
 - `TARGET_CHROMOSOME`: Hedef kromozom.
