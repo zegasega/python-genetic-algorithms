@@ -23,11 +23,11 @@ Proje, aşağıdaki bölümlerden oluşur:
 
 Bu projede bazı önemli parametreler bulunur:
 
-- `POPULATION_SIZE`: Popülasyonun boyutu veya büyüklüğünü belirler.
-- `NUMB_OF_ELITE_CHROMOSOMES`: Seçkin kromozom sayısı.
-- `TOURNAMENT_SELECTION_SIZE`: Turnuva seçimi boyutu.
+- `POPULATION_SIZE`: Popülasyonun boyutu.
+- `NUMB_OF_ELITE_CHROMOSOMES`: Her nesilde korunacak elit kromozomların sayısı.
+- `TOURNAMENT_SELECTION_SIZE`: Turnuva seçiminde yer alacak kromozom sayısı.
 - `TARGET_CHROMOSOME`: Hedef kromozom.
-- `MUTATION_RATE`: Mutasyon oranı.
+- `MUTATION_RATE`: Her bir kromozomdaki gen mutasyon olasılığı.
 - `Population Class`: Kromozom populasyonunu yönetir,Rastgele kromozomlarla başlatılır.
 - `GeneticAlgorithm`: Ana GA işlemlerini içerir.
 - `evolve(pop)`:Popülasyonu önce çaprazlama ve sonra mutasyon uygulayarak evrimleştirir.
