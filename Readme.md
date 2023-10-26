@@ -31,11 +31,9 @@ Bu projede bazı önemli parametreler bulunur:
 
 ## Katkı
 
-Projeye katkıda bulunmak isterseniz, çekme isteği gönderebilirsiniz.
+Projeye katkıda bulunmak ve soru sormak isterseniz bana ulasabilirsiniz
 
-## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyin.
 
 ---
 
