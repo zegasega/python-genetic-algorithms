@@ -2,6 +2,9 @@
 
 Bu proje, genetik algoritma kullanarak belirli bir hedef kromozomun elde edilmesini amaçlayan bir Python uygulamasını içerir. Genetik algoritma, popülasyonları, mutasyonları ve çaprazlamaları kullanarak kromozomları geliştirir ve en uygun kromozomları seçer.
 
+
+![Genetic Algorithms Schema](https://miro.medium.com/v2/resize:fit:964/1*HP8JVxlJtOv14rGLJfXEzA.png)
+
 ## Nasıl Kullanılır
 
 1. Python yüklü olduğundan emin olun.
