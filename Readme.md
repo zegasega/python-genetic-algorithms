@@ -28,6 +28,15 @@ Bu projede bazı önemli parametreler bulunur:
 - `TOURNAMENT_SELECTION_SIZE`: Turnuva seçimi boyutu.
 - `TARGET_CHROMOSOME`: Hedef kromozom.
 - `MUTATION_RATE`: Mutasyon oranı.
+- `Population Class`: Kromozom populasyonunu yönetir,Rastgele kromozomlarla başlatılır.
+- `GeneticAlgorithm`: Ana GA işlemlerini içerir.
+- `evolve(pop)`:Popülasyonu önce çaprazlama ve sonra mutasyon uygulayarak evrimleştirir.
+- `_crossover_population(pop)`:Seçilen kromozomlar üzerinde çaprazlama yaparak yeni bir populasyon oluşturur.
+- `_mutate_population(pop)`:Mutasyon oranına dayalı olarak populasyondaki genleri mutasyona uğratır.
+- `_crossover_chromosomes(chromosomes1, chromosomes2)`:İki kromozom arasında çaprazlama yapar.
+- `_mutate_chromosome(chromosome)`:Mutasyon oranına dayalı olarak bir kromozomdaki genleri mutasyona uğratır.
+- `_select_tournament_population(pop)`:Turnuva seçimi için populasyonun bir alt kümesini seçer ve bu alt kümeden en iyi kromozomu döndürür.
+- `print_the_population(pop, gen_number)`:Popülasyon bilgilerini, nesil numarasını ve kromozom fitness'ini yazdırır.
 
 ## Katkı
 

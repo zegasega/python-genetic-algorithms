@@ -19,7 +19,7 @@ class Chromosome: #genel fonksiyonlar init olarak cunku birden fazla kez farkli 
     def get_genes(self):
         return self.genes
 
-    def get_fitness(self): #fitnes degerlerini hesapla eger gendek random gendeki[i] target gendeki [i] ile eslesiyosa fitnessi 1 artir
+    def get_fitness(self): #fitnes degerlerini hesapla eger random gendeki[i] target gendeki [i] ile eslesiyosa fitnessi 1 artir
         self.fitness = 0
         for i in range(len(self.genes)):
             if self.genes[i] == TARGET_CHROMOSOME[i]:
@@ -38,7 +38,7 @@ class Population:
     def get_chromosomes(self):
         return self.chromosomes
 
-class GeneticAlgorithm: #burada farkli genetik algoritmalar kullanilabilir.saglikli varsayilan genlerden yeni genkler evolve(mutasyon veya evrim) ediliyor.
+class GeneticAlgorithm: #burada farkli genetik algoritmalar kullanilabilir.
 
 
     @staticmethod
