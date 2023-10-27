@@ -1,17 +1,17 @@
 import random
 
-POPULATION_SIZE = 8 #pop size 4,8,12 yeterli
+POPULATION_SIZE = 8 #pop size 4,8,12,20,24...,256 yeterli
 NUMB_OF_ELITE_CHROSOMOSOMES = 1
 TOURNAMENT_SELECTION_SIZE = 4
 TARGET_CHROMOSOME = [1, 1, 0, 1, 0, 0, 0, 1, 1, 0] #target chrosome degistirebilir her sefernde farkli degerler alinniyor
-MUTATION_RATE = 0.25 #mutasyon orani %25 yeterli
+MUTATION_RATE = 0.25 #mutasyon orani()
 
 class Chromosome: #genel fonksiyonlar init olarak cunku birden fazla kez farkli yerlerde kullaniyoruz
     def __init__(self):
         self.genes = []
         self.fitness = 0
         for i in range(len(TARGET_CHROMOSOME)):
-            if random.random() >= 0.5: #generate the random gene here
+            if random.random() >= 0.5: #generate the random gene here/ %47 %53 yapan da var.
                 self.genes.append(1)
             else:
                 self.genes.append(0)
