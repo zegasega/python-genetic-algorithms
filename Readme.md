@@ -51,9 +51,6 @@ This Python script demonstrates a simple genetic algorithm (GA) that evolves a p
 
 The algorithm iteratively evolves the population until the fittest chromosome matches the target chromosome.
 
-## Note
-
-This code provides a basic implementation of a genetic algorithm, and improvements can be made based on specific problem domains and goals.
 
 ## License
 
