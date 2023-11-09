@@ -1,49 +1,60 @@
-# Genetik Algoritma ile Kromozom Optimizasyonu
+# Genetic Algorithm for Chromosome Evolution
 
-Bu proje, genetik algoritma kullanarak belirli bir hedef kromozomun elde edilmesini amaçlayan bir Python uygulamasını içerir. Genetik algoritma, popülasyonları, mutasyonları ve çaprazlamaları kullanarak kromozomları geliştirir ve en uygun kromozomları seçer.
-
+This Python script demonstrates a simple genetic algorithm (GA) that evolves a population of chromosomes to match a target chromosome defined by `TARGET_CHROMOSOME`.
 
 ![Genetic Algorithms Schema](https://miro.medium.com/v2/resize:fit:964/1*HP8JVxlJtOv14rGLJfXEzA.png)
 
-## Nasıl Kullanılır
+# Genetic Algorithm for Chromosome Evolution
 
-1. Python yüklü olduğundan emin olun.
-2. Kodu bu depodan indirin veya kopyalayın.
-3. `main.py` dosyasını çalıştırın.
+This Python script demonstrates a simple genetic algorithm (GA) that evolves a population of chromosomes to match a target chromosome defined by `TARGET_CHROMOSOME`.
 
-## Kodun İçeriği
+## Initialization
 
-Proje, aşağıdaki bölümlerden oluşur:
+- **Population Size (POPULATION_SIZE):** The size of the population.
+- **Number of Elite Chromosomes (NUMB_OF_ELITE_CHROMOSOMES):** Number of elite chromosomes to retain in each generation.
+- **Tournament Selection Size (TOURNAMENT_SELECTION_SIZE):** Number of chromosomes participating in tournament selection.
+- **Target Chromosome (TARGET_CHROMOSOME):** The desired chromosome for evolution.
+- **Mutation Rate (MUTATION_RATE):** Probability of gene mutation in each chromosome.
 
-- `Chromosome`: Kromozom sınıfı, rastgele genler oluşturur ve uygunluk puanını hesaplar.
-- `Population`: Popülasyon sınıfı, kromozomlar arasında popülasyonu yönetir.
-- `GeneticAlgorithm`: Genetik algoritma işlemlerini yönetir.
+## Classes
 
-## Parametreler
+### Chromosome Class
 
-Bu projede bazı önemli parametreler bulunur:
+- Represents an individual chromosome in the population.
+- Initializes a random chromosome with genes (0s and 1s).
+- `get_genes()`: Returns the genes of the chromosome.
+- `get_fitness()`: Calculates the fitness by counting matching genes with the target chromosome.
+- `__str__()`: Returns the genes as a string.
 
-- `POPULATION_SIZE`: Popülasyonun boyutu.
-- `NUMB_OF_ELITE_CHROMOSOMES`: Her nesilde korunacak elit kromozomların sayısı.
-- `TOURNAMENT_SELECTION_SIZE`: Turnuva seçiminde yer alacak kromozom sayısı.
-- `TARGET_CHROMOSOME`: Hedef kromozom.
-- `MUTATION_RATE`: Her bir kromozomdaki gen mutasyon olasılığı.
-- `Population Class`: Kromozom populasyonunu yönetir,Rastgele kromozomlarla başlatılır.
-- `GeneticAlgorithm`: Ana GA işlemlerini içerir.
-- `evolve(pop)`:Popülasyonu önce çaprazlama ve sonra mutasyon uygulayarak evrimleştirir.
-- `_crossover_population(pop)`:Seçilen kromozomlar üzerinde çaprazlama yaparak yeni bir populasyon oluşturur.
-- `_mutate_population(pop)`:Mutasyon oranına dayalı olarak populasyondaki genleri mutasyona uğratır.
-- `_crossover_chromosomes(chromosomes1, chromosomes2)`:İki kromozom arasında çaprazlama yapar.
-- `_mutate_chromosome(chromosome)`:Mutasyon oranına dayalı olarak bir kromozomdaki genleri mutasyona uğratır.
-- `_select_tournament_population(pop)`:Turnuva seçimi için populasyonun bir alt kümesini seçer ve bu alt kümeden en iyi kromozomu döndürür.
-- `print_the_population(pop, gen_number)`:Popülasyon bilgilerini, nesil numarasını ve kromozom fitness'ini yazdırır.
+### Population Class
 
-## Katkı
+- Manages a population of chromosomes.
+- Initializes the population with random chromosomes.
 
-Projeye katkıda bulunmak ve soru sormak isterseniz bana ulasabilirsiniz
+### GeneticAlgorithm Class
 
+- Contains main GA operations.
+- `evolve(pop)`: Evolves the population through crossover and mutation.
+- `_crossover_population(pop)`: Creates a new population through crossover on selected chromosomes.
+- `_mutate_population(pop)`: Mutates genes based on the mutation rate.
+- `_crossover_chromosomes(chromosomes1, chromosomes2)`: Performs crossover between two chromosomes.
+- `_mutate_chromosome(chromosome)`: Mutates the genes in a chromosome.
+- `_select_tournament_population(pop)`: Selects a subset of the population for tournament selection.
+- `print_the_population(pop, gen_number)`: Prints population information.
 
+## Usage
 
----
+1. Clone the project.
+2. Run `main.py` to start the genetic algorithm.
 
-Bu README dosyası, bu projenin amacını ve kullanımını anlamak için oluşturulmuştur. İyi çalışmalar!
+## Results
+
+The algorithm iteratively evolves the population until the fittest chromosome matches the target chromosome.
+
+## Note
+
+This code provides a basic implementation of a genetic algorithm, and improvements can be made based on specific problem domains and goals.
+
+## License
+
+This project is licensed under the [License Name]. See the `LICENSE` file for more details.
